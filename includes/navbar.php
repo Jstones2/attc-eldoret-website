@@ -101,38 +101,17 @@
             <ul class="navbar-nav ms-auto align-items-lg-center">
 
                 <li class="nav-item">
-
-                    <a class="nav-link"
-                       href="#home">
-
-                        Home
-
-                    </a>
-
+                    <a class="nav-link" href="index.php"> Home </a>
                 </li>
 
 
                 <li class="nav-item">
-
-                    <a class="nav-link"
-                       href="#about">
-
-                        About Us
-
-                    </a>
-
+                    <a class="nav-link" href="#about"> About Us </a>
                 </li>
 
 
                 <li class="nav-item dropdown">
-
-                    <a class="nav-link dropdown-toggle"
-                       href="#academics"
-                       data-bs-toggle="dropdown">
-
-                        Academics
-
-                    </a>
+                    <a class="nav-link dropdown-toggle"  href="#academics" data-bs-toggle="dropdown"> Academics</a>
 
                     <ul class="dropdown-menu">
 
@@ -143,7 +122,7 @@
                         </li>
 
                         <li>
-                            <a class="dropdown-item" href="#">
+                            <a class="dropdown-item" href="courses.php">
                                 Courses
                             </a>
                         </li>
@@ -160,49 +139,23 @@
 
 
                 <li class="nav-item">
-
-                    <a class="nav-link"
-                       href="#admissions">
-
-                        Admissions
-
-                    </a>
-
+                    <a class="nav-link" href="admissions.php">Admissions</a>
                 </li>
 
 
                 <li class="nav-item">
-
-                    <a class="nav-link"
-                       href="#student-life">
-
-                        Student Life
-
-                    </a>
-
+                    <a class="nav-link" href="#student-life">Student Life</a>
                 </li>
 
 
                 <li class="nav-item">
-
-                    <a class="nav-link"
-                       href="#contact">
-
-                        Contact
-
-                    </a>
-
+                    <a class="nav-link" href="#contact"> Contact </a>
                 </li>
 
 
                 <li class="nav-item ms-lg-3">
-
-                    <a href="#admissions"
-                       class="btn btn-accent">
-
-                        Apply Now
+                    <a href="admissions.php" class="btn btn-accent">Apply Now
                         <i class="bi bi-arrow-right"></i>
-
                     </a>
 
                 </li>

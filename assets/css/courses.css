@@ -1,0 +1,422 @@
+/* =========================================================
+   COURSES & FEE STRUCTURE — page-specific styles
+   Loaded only on courses.php, on top of assets/css/style.css
+========================================================= */
+
+.course-finder {
+
+    background: #ffffff;
+
+}
+
+
+/* ---------- Toolbar ---------- */
+
+.finder-toolbar {
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: center;
+    background: var(--light);
+    border: 1px solid #e5e7eb;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 18px;
+
+}
+
+
+.finder-search {
+
+    position: relative;
+    flex: 1 1 280px;
+
+}
+
+
+.finder-search i {
+
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    color: var(--gray);
+    font-size: 15px;
+
+}
+
+
+.finder-search input {
+
+    width: 100%;
+    border: 1px solid #d8dee5;
+    border-radius: 3px;
+    padding: 11px 14px 11px 42px;
+    font-size: 14.5px;
+    background: #ffffff;
+    transition: .2s;
+
+}
+
+
+.finder-search input:focus {
+
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 .2rem rgba(18,184,176,.15);
+
+}
+
+
+.finder-filters {
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+
+}
+
+
+.finder-filters .form-select {
+
+    border-radius: 3px;
+    border: 1px solid #d8dee5;
+    font-size: 14px;
+    padding: 10px 34px 10px 14px;
+    min-width: 180px;
+
+}
+
+
+.finder-filters .form-select:focus {
+
+    border-color: var(--accent);
+    box-shadow: 0 0 0 .2rem rgba(18,184,176,.15);
+
+}
+
+
+.btn-link-reset {
+
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: none;
+    border: none;
+    color: var(--accent-dark);
+    font-weight: 600;
+    font-size: 14px;
+    padding: 8px 4px;
+    white-space: nowrap;
+
+}
+
+
+.btn-link-reset:hover {
+
+    color: var(--primary);
+
+}
+
+
+/* ---------- Results meta ---------- */
+
+.finder-meta {
+
+    font-size: 13.5px;
+    color: var(--gray);
+    margin-bottom: 14px;
+
+}
+
+
+.finder-meta span {
+
+    font-weight: 700;
+    color: var(--primary);
+
+}
+
+
+/* ---------- Table ---------- */
+
+.course-table-wrap {
+
+    border: 1px solid #e5e7eb;
+    border-radius: 4px;
+    overflow: auto;
+    max-height: 74vh;
+
+}
+
+
+.course-table {
+
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    min-width: 900px;
+
+}
+
+
+.course-table thead th {
+
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background: var(--primary);
+    color: #ffffff;
+    text-align: left;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 12.5px;
+    letter-spacing: .4px;
+    text-transform: uppercase;
+    padding: 15px 18px;
+    white-space: nowrap;
+
+}
+
+
+.course-table tbody tr {
+
+    border-bottom: 1px solid #edf0f3;
+    transition: background .15s;
+
+}
+
+
+.course-table tbody tr:hover {
+
+    background: var(--light);
+
+}
+
+
+.course-table td {
+
+    padding: 14px 18px;
+    color: var(--dark);
+    vertical-align: middle;
+    white-space: nowrap;
+
+}
+
+
+.course-name {
+
+    font-weight: 600;
+    color: var(--primary);
+    white-space: normal;
+    min-width: 220px;
+
+}
+
+
+.course-school {
+
+    color: var(--gray);
+    font-size: 13px;
+    white-space: normal;
+    min-width: 180px;
+
+}
+
+
+.level-badge {
+
+    display: inline-block;
+    font-size: 11.5px;
+    font-weight: 700;
+    padding: 4px 11px;
+    border-radius: 20px;
+    letter-spacing: .3px;
+
+}
+
+
+.level-certificate {
+
+    background: rgba(8,43,82,.08);
+    color: var(--primary);
+
+}
+
+
+.level-diploma {
+
+    background: rgba(18,184,176,.12);
+    color: var(--accent-dark);
+
+}
+
+
+.level-short-course {
+
+    background: rgba(220,53,69,.08);
+    color: #b32434;
+
+}
+
+
+.exam-badge {
+
+    display: inline-block;
+    font-size: 11.5px;
+    font-weight: 700;
+    color: var(--gray);
+    border: 1px solid #dde2e7;
+    border-radius: 4px;
+    padding: 3px 9px;
+
+}
+
+
+.fee-total {
+
+    font-weight: 700;
+    color: var(--primary);
+
+}
+
+
+.fee-note {
+
+    display: block;
+    font-size: 10.5px;
+    font-weight: 500;
+    color: var(--gray);
+    text-transform: uppercase;
+    letter-spacing: .3px;
+
+}
+
+
+.apply-link {
+
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--accent-dark);
+    font-weight: 700;
+    font-size: 13px;
+
+}
+
+
+.apply-link i {
+
+    transition: .2s;
+
+}
+
+
+.apply-link:hover i {
+
+    transform: translateX(3px);
+
+}
+
+
+/* ---------- Empty state ---------- */
+
+.finder-empty {
+
+    text-align: center;
+    padding: 70px 20px;
+
+}
+
+
+.finder-empty i {
+
+    font-size: 34px;
+    color: var(--gray);
+    margin-bottom: 14px;
+    display: block;
+
+}
+
+
+.finder-empty h4 {
+
+    color: var(--primary);
+    margin-bottom: 8px;
+
+}
+
+
+.finder-empty p {
+
+    color: var(--gray);
+    font-size: 14px;
+    margin-bottom: 20px;
+
+}
+
+
+/* ---------- Disclaimer ---------- */
+
+.fee-disclaimer {
+
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--gray);
+    margin-top: 20px;
+
+}
+
+
+.fee-disclaimer i {
+
+    color: var(--accent);
+    margin-top: 2px;
+
+}
+
+
+.fee-disclaimer a {
+
+    color: var(--accent-dark);
+    font-weight: 600;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 767px) {
+
+    .finder-toolbar {
+
+        padding: 16px;
+
+    }
+
+    .finder-filters {
+
+        width: 100%;
+
+    }
+
+    .finder-filters .form-select {
+
+        flex: 1 1 140px;
+        min-width: 0;
+
+    }
+
+    .course-table-wrap {
+
+        max-height: 70vh;
+
+    }
+
+}

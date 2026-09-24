@@ -1540,8 +1540,447 @@ a {
 
 
 /* =========================================================
-   RESPONSIVE
+   INNER PAGE BANNER (Admissions, and future inner pages)
 ========================================================= */
+
+.page-banner {
+
+    background:
+        linear-gradient(100deg, var(--primary-dark), var(--primary) 70%, var(--secondary));
+
+    color: #ffffff;
+    padding: 170px 0 60px;
+
+}
+
+
+.page-breadcrumb {
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: rgba(255,255,255,.7);
+    margin-bottom: 16px;
+
+}
+
+
+.page-breadcrumb a {
+
+    color: rgba(255,255,255,.7);
+    transition: .3s;
+
+}
+
+
+.page-breadcrumb a:hover {
+
+    color: var(--accent);
+
+}
+
+
+.page-breadcrumb span {
+
+    color: #ffffff;
+    font-weight: 600;
+
+}
+
+
+.page-banner h1 {
+
+    color: #ffffff;
+    font-size: clamp(32px, 4.5vw, 48px);
+    margin-bottom: 14px;
+
+}
+
+
+.page-banner-lede {
+
+    color: rgba(255,255,255,.85);
+    max-width: 620px;
+    font-size: 16px;
+    margin: 0;
+
+}
+
+
+
+/* =========================================================
+   ADMISSION FORM
+========================================================= */
+
+.admission-section {
+
+    background: var(--light);
+
+}
+
+
+.admission-panel-wrap {
+
+    position: relative;
+
+}
+
+
+.admission-card,
+.success-panel {
+
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 4px;
+    padding: 40px;
+
+}
+
+
+.admission-card h2 {
+
+    color: var(--primary);
+    font-size: 26px;
+    margin-bottom: 6px;
+
+}
+
+
+.admission-card-sub {
+
+    color: var(--gray);
+    font-size: 13px;
+    margin-bottom: 28px;
+
+}
+
+
+.req {
+
+    color: #dc3545;
+
+}
+
+
+.apply-form .form-label {
+
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--dark);
+    margin-bottom: 6px;
+
+}
+
+
+.apply-form .form-control,
+.apply-form .form-select {
+
+    border-radius: 3px;
+    border: 1px solid #d8dee5;
+    padding: 11px 14px;
+    font-size: 14.5px;
+
+}
+
+
+.apply-form .form-control:focus,
+.apply-form .form-select:focus {
+
+    border-color: var(--accent);
+    box-shadow: 0 0 0 .2rem rgba(18,184,176,.15);
+
+}
+
+
+.apply-form .form-check-label {
+
+    font-size: 14px;
+    color: var(--gray);
+
+}
+
+
+.apply-form .btn-accent {
+
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 6px;
+
+}
+
+
+.apply-form .btn-spinner {
+
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+}
+
+
+
+/* =========================================================
+   SUCCESS PANEL
+========================================================= */
+
+.success-panel {
+
+    text-align: center;
+    background: linear-gradient(160deg, var(--primary-dark), var(--primary) 80%);
+    color: #ffffff;
+    padding: 56px 40px;
+    opacity: 0;
+    transform: translateY(18px) scale(.98);
+    transition: opacity .5s ease, transform .5s ease;
+
+}
+
+
+.success-panel.is-visible {
+
+    opacity: 1;
+    transform: translateY(0) scale(1);
+
+}
+
+
+.success-icon {
+
+    width: 84px;
+    height: 84px;
+    margin: 0 auto 24px;
+    border-radius: 50%;
+    background: rgba(18,184,176,.18);
+    border: 2px solid var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: var(--accent);
+    animation: successPop .5s ease .1s backwards;
+
+}
+
+
+@keyframes successPop {
+
+    0%   { transform: scale(.4); opacity: 0; }
+    70%  { transform: scale(1.08); opacity: 1; }
+    100% { transform: scale(1); }
+
+}
+
+
+.success-panel h2 {
+
+    color: #ffffff;
+    font-size: 26px;
+    margin-bottom: 14px;
+
+}
+
+
+.success-text {
+
+    color: rgba(255,255,255,.85);
+    max-width: 440px;
+    margin: 0 auto 26px;
+    font-size: 15px;
+
+}
+
+
+.success-text strong {
+
+    color: var(--accent);
+
+}
+
+
+.success-ref {
+
+    display: inline-flex;
+    flex-direction: column;
+    gap: 4px;
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.18);
+    border-radius: 4px;
+    padding: 12px 26px;
+    margin-bottom: 30px;
+
+}
+
+
+.success-ref span {
+
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.6);
+
+}
+
+
+.success-ref strong {
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    color: #ffffff;
+
+}
+
+
+.success-actions {
+
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+
+}
+
+
+.success-actions .btn-outline-light {
+
+    border-color: rgba(255,255,255,.4);
+
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+
+    .success-panel { transition: none; }
+    .success-icon { animation: none; }
+
+}
+
+
+
+/* =========================================================
+   ADMISSION SIDEBAR
+========================================================= */
+
+.admission-side-card {
+
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 4px;
+    padding: 32px;
+    margin-bottom: 24px;
+
+}
+
+
+.admission-side-card h3 {
+
+    color: var(--primary);
+    font-size: 19px;
+    margin-bottom: 22px;
+
+}
+
+
+.admission-steps {
+
+    list-style: none;
+
+}
+
+
+.admission-steps li {
+
+    display: flex;
+    gap: 16px;
+    margin-bottom: 22px;
+
+}
+
+
+.admission-steps li:last-child {
+
+    margin-bottom: 0;
+
+}
+
+
+.step-num {
+
+    flex-shrink: 0;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(18,184,176,.12);
+    color: var(--accent-dark);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.admission-steps strong {
+
+    display: block;
+    color: var(--primary);
+    font-size: 15px;
+    margin-bottom: 3px;
+
+}
+
+
+.admission-steps p {
+
+    color: var(--gray);
+    font-size: 13.5px;
+    margin: 0;
+
+}
+
+
+.admission-contact-card p {
+
+    font-size: 14px;
+    color: var(--gray);
+    margin-bottom: 12px;
+
+}
+
+
+.admission-contact-card i {
+
+    color: var(--accent);
+    margin-right: 8px;
+
+}
+
+
+@media (max-width: 767px) {
+
+    .page-banner {
+        padding: 150px 0 45px;
+    }
+
+    .admission-card,
+    .success-panel {
+        padding: 28px 22px;
+    }
+
+    .success-actions {
+        flex-direction: column;
+    }
+
+    .success-actions .btn {
+        width: 100%;
+    }
+
+}
 
 @media (max-width: 991px) {
 
