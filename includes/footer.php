@@ -79,7 +79,7 @@
                 <ul class="footer-nav">
 
                     <li>
-                        <a class="footer-link" href="#about">
+                        <a class="footer-link" href="/about.php">
                             About Us
                         </a>
                     </li>
@@ -91,7 +91,7 @@
                     </li>
 
                     <li>
-                        <a class="footer-link" href="#admissions">
+                        <a class="footer-link" href="/admissions.php">
                             Admissions
                         </a>
                     </li>
@@ -117,7 +117,7 @@
                 <ul class="footer-nav">
 
                     <li>
-                        <a class="footer-link" href="#">
+                        <a class="footer-link" href="/courses.php">
                             Courses
                         </a>
                     </li>

@@ -1,0 +1,284 @@
+/* =========================================================
+   ABOUT PAGE — page-specific styles
+   Loaded only on about.php, on top of assets/css/style.css
+========================================================= */
+
+.about-story {
+
+    background: #ffffff;
+
+}
+
+
+.about-story h2 {
+
+    font-size: 34px;
+    color: var(--primary);
+    margin: 10px 0 18px;
+
+}
+
+
+/* ---------- Mission & Vision ---------- */
+
+.mv-section {
+
+    background: var(--light);
+
+}
+
+
+.mv-card {
+
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 4px;
+    padding: 40px;
+    height: 100%;
+    transition: .3s;
+
+}
+
+
+.mv-card:hover {
+
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(8,43,82,.08);
+
+}
+
+
+.mv-card-alt {
+
+    background: linear-gradient(150deg, var(--primary-dark), var(--primary));
+    border-color: transparent;
+
+}
+
+
+.mv-icon {
+
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(18,184,176,.12);
+    color: var(--accent-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    margin-bottom: 22px;
+
+}
+
+
+.mv-card-alt .mv-icon {
+
+    background: rgba(18,184,176,.2);
+    color: var(--accent);
+
+}
+
+
+.mv-card h3 {
+
+    color: var(--primary);
+    font-size: 21px;
+    margin-bottom: 14px;
+
+}
+
+
+.mv-card-alt h3 {
+
+    color: #ffffff;
+
+}
+
+
+.mv-card p {
+
+    color: var(--gray);
+    margin: 0;
+    line-height: 1.75;
+
+}
+
+
+.mv-card-alt p {
+
+    color: rgba(255,255,255,.82);
+
+}
+
+
+/* ---------- Stats ---------- */
+
+.stats-section {
+
+    background: linear-gradient(100deg, var(--primary-dark), var(--primary));
+    padding: 60px 0;
+
+}
+
+
+.stat-block {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+
+}
+
+
+.stat-block strong {
+
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(32px, 4vw, 44px);
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 10px;
+
+}
+
+
+.stat-block span {
+
+    font-size: 13px;
+    color: rgba(255,255,255,.75);
+    letter-spacing: .3px;
+
+}
+
+
+/* ---------- Core Values ---------- */
+
+.values-section {
+
+    background: #ffffff;
+
+}
+
+
+.value-card {
+
+    background: var(--light);
+    border: 1px solid #e5e7eb;
+    border-radius: 4px;
+    padding: 32px 26px;
+    height: 100%;
+    transition: .3s;
+
+}
+
+
+.value-card:hover {
+
+    background: #ffffff;
+    transform: translateY(-6px);
+    box-shadow: 0 18px 35px rgba(8,43,82,.08);
+
+}
+
+
+.value-card i {
+
+    font-size: 26px;
+    color: var(--accent-dark);
+    margin-bottom: 16px;
+    display: block;
+
+}
+
+
+.value-card h4 {
+
+    color: var(--primary);
+    font-size: 17px;
+    margin-bottom: 10px;
+
+}
+
+
+.value-card p {
+
+    color: var(--gray);
+    font-size: 14px;
+    margin: 0;
+    line-height: 1.65;
+
+}
+
+
+/* ---------- Our Approach ---------- */
+
+.approach-section {
+
+    background: var(--light);
+
+}
+
+
+.approach-card {
+
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 4px;
+    padding: 34px 28px;
+    height: 100%;
+    position: relative;
+
+}
+
+
+.approach-num {
+
+    display: block;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 34px;
+    color: rgba(18,184,176,.25);
+    margin-bottom: 8px;
+
+}
+
+
+.approach-card h4 {
+
+    color: var(--primary);
+    font-size: 18px;
+    margin-bottom: 12px;
+
+}
+
+
+.approach-card p {
+
+    color: var(--gray);
+    font-size: 14px;
+    margin: 0;
+    line-height: 1.7;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 767px) {
+
+    .about-story h2 {
+        font-size: 27px;
+    }
+
+    .mv-card {
+        padding: 28px 24px;
+    }
+
+    .stats-section {
+        padding: 45px 0;
+    }
+
+}

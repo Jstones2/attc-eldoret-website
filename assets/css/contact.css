@@ -1,0 +1,294 @@
+/* =========================================================
+   CONTACT PAGE — page-specific styles
+   Loaded only on contact.php, on top of assets/css/style.css
+========================================================= */
+
+/* ---------- Quick contact cards ---------- */
+
+.contact-cards-section {
+
+    background: var(--light);
+    padding: 40px 0 10px;
+
+}
+
+
+.contact-info-card {
+
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 4px;
+    padding: 30px 24px;
+    height: 100%;
+    text-align: center;
+    transition: .3s;
+
+}
+
+
+.contact-info-card:hover {
+
+    transform: translateY(-6px);
+    box-shadow: 0 18px 35px rgba(8,43,82,.08);
+
+}
+
+
+.cic-icon {
+
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 16px;
+    border-radius: 50%;
+    background: rgba(18,184,176,.1);
+    color: var(--accent-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+
+}
+
+
+.contact-info-card h4 {
+
+    color: var(--primary);
+    font-size: 16px;
+    margin-bottom: 10px;
+
+}
+
+
+.contact-info-card p {
+
+    color: var(--gray);
+    font-size: 13.5px;
+    margin: 0;
+    line-height: 1.6;
+
+}
+
+
+.contact-info-card a {
+
+    color: var(--gray);
+    transition: .2s;
+
+}
+
+
+.contact-info-card a:hover {
+
+    color: var(--accent-dark);
+
+}
+
+
+/* ---------- Contact form section ---------- */
+
+.contact-form-section {
+
+    background: #ffffff;
+
+}
+
+
+/* ---------- Social list (sidebar) ---------- */
+
+.contact-social-list {
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+
+.contact-social-list a {
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    border: 1px solid #e5e7eb;
+    border-radius: 4px;
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 14px;
+    transition: .25s;
+
+}
+
+
+.contact-social-list a i {
+
+    color: var(--accent-dark);
+    font-size: 17px;
+    width: 20px;
+
+}
+
+
+.contact-social-list a:hover {
+
+    background: var(--primary);
+    color: #ffffff;
+    border-color: var(--primary);
+
+}
+
+
+.contact-social-list a:hover i {
+
+    color: var(--accent);
+
+}
+
+
+/* ---------- Map ---------- */
+
+.map-frame {
+
+    position: relative;
+    width: 100%;
+    padding-top: 66%;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid #e5e7eb;
+
+}
+
+
+.map-frame iframe {
+
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+
+}
+
+
+.map-note {
+
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    font-size: 12px;
+    color: var(--gray);
+    margin: 12px 0 0;
+
+}
+
+
+.map-note i {
+
+    color: var(--accent);
+    margin-top: 1px;
+
+}
+
+
+/* ---------- FAQ accordion ---------- */
+
+.faq-section {
+
+    background: var(--light);
+
+}
+
+
+.faq-accordion {
+
+    max-width: 860px;
+    margin: 0 auto;
+
+}
+
+
+.faq-accordion .accordion-item {
+
+    border: 1px solid #e5e7eb;
+    border-radius: 4px !important;
+    margin-bottom: 14px;
+    overflow: hidden;
+
+}
+
+
+.faq-accordion .accordion-button {
+
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 15.5px;
+    color: var(--primary);
+    padding: 20px 24px;
+    background: #ffffff;
+
+}
+
+
+.faq-accordion .accordion-button:not(.collapsed) {
+
+    color: var(--primary);
+    background: #ffffff;
+    box-shadow: none;
+
+}
+
+
+.faq-accordion .accordion-button:not(.collapsed)::after {
+
+    filter: none;
+
+}
+
+
+.faq-accordion .accordion-button:focus {
+
+    box-shadow: none;
+    border-color: transparent;
+
+}
+
+
+.faq-accordion .accordion-body {
+
+    padding: 4px 24px 24px;
+    color: var(--gray);
+    font-size: 14.5px;
+    line-height: 1.75;
+
+}
+
+
+.faq-accordion .accordion-body a {
+
+    color: var(--accent-dark);
+    font-weight: 600;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 767px) {
+
+    .contact-cards-section {
+        padding-top: 30px;
+    }
+
+    .faq-accordion .accordion-button {
+        font-size: 14px;
+        padding: 16px 18px;
+    }
+
+    .faq-accordion .accordion-body {
+        padding: 2px 18px 18px;
+        font-size: 14px;
+    }
+
+}
