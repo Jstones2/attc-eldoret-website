@@ -130,7 +130,7 @@
                      data-aos="fade-up"
                      data-aos-delay="300">
 
-                    <a href="#academics"
+                    <a href="/courses.php"
                        class="btn btn-accent btn-lg">
 
                         Explore Our Courses
@@ -140,7 +140,7 @@
                     </a>
 
 
-                    <a href="#about"
+                    <a href="/about.php"
                        class="btn btn-outline-light btn-lg ms-2">
 
                         Discover Our College
@@ -545,7 +545,7 @@
                 </div>
 
 
-                <a href="#"
+                <a href="/about.php"
                    class="btn btn-primary mt-4">
 
                     Learn More About Us
