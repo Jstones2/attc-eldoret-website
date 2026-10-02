@@ -1,0 +1,65 @@
+/* =========================================================
+   ALL SCHOOLS PAGE — page-specific styles
+   Loaded only on all_schools.php, on top of assets/css/style.css
+========================================================= */
+
+/* ---------- Banner count emphasis ---------- */
+
+.banner-count {
+
+    color: var(--accent);
+    font-weight: 700;
+
+}
+
+
+/* ---------- School card icon badge ---------- */
+
+/* .school-image/.school-card are defined globally in style.css (shared
+   with index.php); position:relative is scoped here rather than added
+   globally since only this page's cards need the floating icon badge */
+
+.school-image {
+
+    position: relative;
+
+}
+
+
+.school-card-icon {
+
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(4,29,56,.72);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255,255,255,.25);
+    border-radius: 50%;
+    color: var(--accent);
+    font-size: 17px;
+
+}
+
+
+/* ---------- Grid spacing ---------- */
+
+.schools-section .school-content p {
+
+    min-height: 63px;
+
+}
+
+
+@media (max-width: 767px) {
+
+    .schools-section .school-content p {
+        min-height: 0;
+    }
+
+}

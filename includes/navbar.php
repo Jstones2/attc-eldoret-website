@@ -116,7 +116,7 @@
                     <ul class="dropdown-menu">
 
                         <li>
-                            <a class="dropdown-item" href="#schools">
+                            <a class="dropdown-item" href="/schools.php">
                                 Academic Schools
                             </a>
                         </li>

@@ -1,0 +1,273 @@
+/* =========================================================
+   SCHOOL DETAILS PAGE — page-specific styles
+   Loaded only on school-details.php, on top of
+   assets/css/style.css and assets/css/courses.css
+========================================================= */
+
+/* ---------- Hero ---------- */
+
+.school-hero {
+
+    position: relative;
+    color: #ffffff;
+    padding: 170px 0 70px;
+    background-size: cover;
+    background-position: center;
+    background-color: var(--primary-dark);
+    overflow: hidden;
+
+}
+
+
+.school-hero-overlay {
+
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(100deg, rgba(4,29,56,.95), rgba(8,43,82,.82) 60%, rgba(8,43,82,.5));
+
+}
+
+
+.school-hero .page-breadcrumb {
+
+    position: relative;
+    z-index: 1;
+
+}
+
+
+.school-hero .page-breadcrumb a {
+
+    color: rgba(255,255,255,.7);
+
+}
+
+
+.school-hero .page-breadcrumb a:hover {
+
+    color: var(--accent);
+
+}
+
+
+.school-hero-icon {
+
+    position: relative;
+    z-index: 1;
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    background: rgba(18,184,176,.18);
+    border: 1px solid rgba(18,184,176,.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: var(--accent);
+    margin-bottom: 22px;
+
+}
+
+
+.school-hero h1 {
+
+    position: relative;
+    z-index: 1;
+    color: #ffffff;
+    font-size: clamp(30px, 4.2vw, 46px);
+    max-width: 720px;
+    margin-bottom: 16px;
+
+}
+
+
+.school-hero-lede {
+
+    position: relative;
+    z-index: 1;
+    color: rgba(255,255,255,.85);
+    max-width: 620px;
+    font-size: 16px;
+    margin-bottom: 26px;
+
+}
+
+
+.school-hero-meta {
+
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 30px;
+
+}
+
+
+.school-hero-meta span {
+
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.18);
+    border-radius: 30px;
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: 600;
+
+}
+
+
+.school-hero-meta i {
+
+    color: var(--accent);
+
+}
+
+
+.school-hero .btn-accent {
+
+    position: relative;
+    z-index: 1;
+
+}
+
+
+/* ---------- Programs table ---------- */
+
+.school-programs {
+
+    background: #ffffff;
+
+}
+
+
+/* this page's lists are short (one school's worth of programs), so the
+   internal scroll + sticky header from courses.php's much longer table
+   isn't needed here */
+
+.school-table-wrap {
+
+    max-height: none;
+    overflow: visible;
+
+}
+
+
+/* ---------- Not found state ---------- */
+
+.not-found-section {
+
+    background: var(--light);
+    padding: 90px 0;
+
+}
+
+
+.not-found-section i {
+
+    font-size: 48px;
+    color: var(--accent-dark);
+    margin-bottom: 20px;
+    display: block;
+
+}
+
+
+.not-found-section h2 {
+
+    color: var(--primary);
+    margin-bottom: 10px;
+
+}
+
+
+.not-found-section p {
+
+    color: var(--gray);
+    margin-bottom: 26px;
+
+}
+
+
+/* ---------- Other schools ---------- */
+
+.other-schools {
+
+    background: var(--light);
+
+}
+
+
+.other-school-card {
+
+    display: block;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 4px;
+    padding: 28px 24px;
+    height: 100%;
+    transition: .3s;
+
+}
+
+
+.other-school-card:hover {
+
+    transform: translateY(-6px);
+    box-shadow: 0 18px 35px rgba(8,43,82,.08);
+    border-color: transparent;
+
+}
+
+
+.other-school-card i {
+
+    font-size: 24px;
+    color: var(--accent-dark);
+    margin-bottom: 14px;
+    display: block;
+
+}
+
+
+.other-school-card h4 {
+
+    color: var(--primary);
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 1.4;
+
+}
+
+
+.other-school-card span {
+
+    color: var(--accent-dark);
+    font-weight: 700;
+    font-size: 13px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 767px) {
+
+    .school-hero {
+        padding: 150px 0 50px;
+    }
+
+    .school-hero .btn-accent {
+        width: 100%;
+        justify-content: center;
+    }
+
+}

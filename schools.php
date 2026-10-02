@@ -26,7 +26,7 @@ require_once 'data/courses-data.php';
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Page-specific stylesheet: just the banner count badge + grid spacing
          tweaks that don't belong in the global stylesheet -->
-    <link rel="stylesheet" href="assets/css/all-schools.css">
+    <link rel="stylesheet" href="assets/css/schools.css">
     <link rel="icon" href="assets/images/attc-logo.png">
 
 </head>
@@ -52,7 +52,8 @@ require_once 'data/courses-data.php';
         <h1>All Academic Schools</h1>
 
         <p class="page-banner-lede">
-            <?php echo count($schools); ?> schools, <?php echo count($courses); ?> programs —
+            <span class="banner-count"><?php echo count($schools); ?> schools</span>,
+            <span class="banner-count"><?php echo count($courses); ?> programs</span> —
             browse every school at ATTC and explore what's taught under it.
         </p>
 

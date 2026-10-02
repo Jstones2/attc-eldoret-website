@@ -1,3 +1,9 @@
+
+<?php
+require_once 'data/schools-data.php';
+require_once 'data/courses-data.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -720,7 +726,7 @@
 
             </div>
 
-            <a href="#"
+            <a href="/schools.php"
                class="btn btn-outline-primary">
 
                 View All Schools
@@ -733,270 +739,53 @@
 
 
         <div class="row g-4 mt-3">
-
-
-            <!-- HEALTH -->
-
-            <div class="col-md-6 col-lg-4"
-                 data-aos="fade-up">
-
-                <div class="school-card">
-
-                    <div class="school-image">
-
-                        <img src="assets/images/schools/health.jpg" alt="ICT students"class="img-fluid w-100 h-100 object-fit-cover">
-
-                    </div>
-
-
-                    <div class="school-content">
-
-                        <span class="school-number">
-                            01
-                        </span>
-
-                        <h3>
-                            Medical, Nursing &
-                            Health Sciences
-                        </h3>
-
-                        <p>
-                            Nutrition, Community Health,
-                            Applied Biology, Health Records
-                            and other health-related programs.
-                        </p>
-
-                        <a href="#">
-                            Explore School
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- ICT -->
-
+              <?php
+                // Only the first 6 schools are featured on the homepage —
+                // the full 13 live on all_schools.php. Slicing here (rather
+                // than looping every school) is what keeps this section to
+                // exactly 6 cards.
+                $featuredSchools = array_slice($schools, 0, 6);
+                $aosDelays = [0, 100, 200, 0, 100, 200];
+                $i = 0;
+            ?>
+ 
+            <?php foreach ($featuredSchools as $s): ?>
+ 
             <div class="col-md-6 col-lg-4"
                  data-aos="fade-up"
-                 data-aos-delay="100">
-
+                 <?php if ($aosDelays[$i] > 0): ?>data-aos-delay="<?php echo $aosDelays[$i]; ?>"<?php endif; ?>>
+ 
                 <div class="school-card">
-
+ 
                     <div class="school-image">
-
-                         <img src="assets/images/schools/ict.jpg" alt="ICT students"class="img-fluid w-100 h-100 object-fit-cover">
-
+                        <img src="<?php echo htmlspecialchars($s['image']); ?>"
+                             alt="<?php echo htmlspecialchars($s['name']); ?> students"
+                             class="img-fluid w-100 h-100 object-fit-cover">
                     </div>
-
-
+ 
                     <div class="school-content">
-
+ 
                         <span class="school-number">
-                            02
+                            <?php echo htmlspecialchars($s['number']); ?>
                         </span>
-
-                        <h3>
-                            Information Communication
-                            Technology
-                        </h3>
-
-                        <p>
-                            Computer Science, Cyber Security,
-                            Networking, Programming, Graphics
-                            Design and ICT Technician programs.
-                        </p>
-
-                        <a href="#">
+ 
+                        <h3><?php echo htmlspecialchars($s['name']); ?></h3>
+ 
+                        <p><?php echo htmlspecialchars($s['card_desc']); ?></p>
+ 
+                        <a href="school-details.php?school=<?php echo urlencode($s['slug']); ?>">
                             Explore School
                             <i class="bi bi-arrow-right"></i>
                         </a>
-
+ 
                     </div>
-
+ 
                 </div>
-
+ 
             </div>
-
-
-
-            <!-- BUSINESS -->
-
-            <div class="col-md-6 col-lg-4"
-                 data-aos="fade-up"
-                 data-aos-delay="200">
-
-                <div class="school-card">
-
-                    <div class="school-image">
-                        <img src="assets/images/schools/business.jpg" alt="ICT students"class="img-fluid w-100 h-100 object-fit-cover">
-
-                    </div>
-
-
-                    <div class="school-content">
-
-                        <span class="school-number">
-                            03
-                        </span>
-
-                        <h3>
-                            School of Business
-                        </h3>
-
-                        <p>
-                            Accountancy, Human Resource,
-                            Supply Chain, Banking & Finance,
-                            Project Management and more.
-                        </p>
-
-                        <a href="#">
-                            Explore School
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- TOURISM -->
-
-            <div class="col-md-6 col-lg-4"
-                 data-aos="fade-up">
-
-                <div class="school-card">
-
-                    <div class="school-image">
-
-                         <img src="assets/images/schools/tourism.jpg" alt="ICT students"class="img-fluid w-100 h-100 object-fit-cover">
-
-                    </div>
-
-
-                    <div class="school-content">
-
-                        <span class="school-number">
-                            04
-                        </span>
-
-                        <h3>
-                            Tourism & Travel
-                        </h3>
-
-                        <p>
-                            Tour Guiding, Airline Cabin Crew,
-                            Airport Operations, Flight Dispatch,
-                            Tourism Management and Languages.
-                        </p>
-
-                        <a href="#">
-                            Explore School
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- HOSPITALITY -->
-
-            <div class="col-md-6 col-lg-4"
-                 data-aos="fade-up"
-                 data-aos-delay="100">
-
-                <div class="school-card">
-
-                    <div class="school-image">
-
-                         <img src="assets/images/schools/hospitality.jpg" alt="ICT students"class="img-fluid w-100 h-100 object-fit-cover">
-
-                    </div>
-
-
-                    <div class="school-content">
-
-                        <span class="school-number">
-                            05
-                        </span>
-
-                        <h3>
-                            Hospitality
-                        </h3>
-
-                        <p>
-                            Catering, Culinary Arts, Bakery,
-                            Barista Skills, Housekeeping,
-                            Bartending and Coffee Roasting.
-                        </p>
-
-                        <a href="#">
-                            Explore School
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- ENGINEERING -->
-
-            <div class="col-md-6 col-lg-4"
-                 data-aos="fade-up"
-                 data-aos-delay="200">
-
-                <div class="school-card">
-
-                    <div class="school-image">
-
-                         <img src="assets/images/schools/engineering.jpg" alt="ICT students"class="img-fluid w-100 h-100 object-fit-cover">
-
-                    </div>
-
-
-                    <div class="school-content">
-
-                        <span class="school-number">
-                            06
-                        </span>
-
-                        <h3>
-                            Engineering
-                        </h3>
-
-                        <p>
-                            Electrical Engineering, Automotive,
-                            Welding & Fabrication, Refrigeration
-                            and Electrical Installation.
-                        </p>
-
-                        <a href="#">
-                            Explore School
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
+ 
+            <?php $i++; endforeach; ?>
+ 
 
         </div>
 

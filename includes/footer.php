@@ -85,7 +85,7 @@
                     </li>
 
                     <li>
-                        <a class="footer-link" href="#schools">
+                        <a class="footer-link" href="/schools.php">
                             Academics
                         </a>
                     </li>
@@ -123,7 +123,7 @@
                     </li>
 
                     <li>
-                        <a class="footer-link" href="#schools">
+                        <a class="footer-link" href="/schools.php">
                             Schools
                         </a>
                     </li>
